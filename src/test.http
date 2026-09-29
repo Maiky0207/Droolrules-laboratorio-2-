@@ -1,0 +1,33 @@
+### Test 1: Pasajero GOLD con retraso de 120 minutos (Dispara la regla)
+POST http://localhost:8080/airline/api/evaluate-ai
+Content-Type: application/json
+
+{
+  "passenger": {
+    "name": "Carlos Gómez",
+    "membershipStatus": "GOLD"
+  },
+  "flight": {
+    "flightNumber": "UD-123",
+    "delayMinutes": 120
+  },
+  "baggageWeight": 20.0
+}
+
+###
+
+### Test 2: Pasajero PLATINUM con retraso de 90 minutos
+POST http://localhost:8080/airline/api/evaluate-ai
+Content-Type: application/json
+
+{
+  "passenger": {
+    "name": "Luisa Fernanda",
+    "membershipStatus": "PLATINUM"
+  },
+  "flight": {
+    "flightNumber": "UD-456",
+    "delayMinutes": 90
+  },
+  "baggageWeight": 15.0
+}
